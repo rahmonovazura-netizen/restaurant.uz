@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qabulga yozilish - Shifo Tibbiyot Markazi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header-slot"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Qabulga yozilish</h1>
+    <p>Bir necha daqiqada shifokor qabuliga yoziling</p>
+    <div class="breadcrumb"><a href="index.html">Bosh sahifa</a> / Qabulga yozilish</div>
+  </div>
+</div>
+
+<section>
+  <div class="container grid grid-2" style="align-items:start">
+    <div class="form-card reveal">
+      <h2 style="margin-bottom:24px;color:var(--primary-dark)">Qabul ma'lumotlari</h2>
+      <form id="appointmentForm" novalidate>
+        <div class="form-group">
+          <label for="name">F.I.Sh. *</label>
+          <input id="name" type="text" data-required placeholder="Masalan: Aliyev Bekzod">
+          <div class="error">Ism-familiyani kiriting</div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefon raqami *</label>
+          <input id="phone" type="tel" data-required placeholder="+998 90 123 45 67">
+          <div class="error">To'g'ri telefon raqamini kiriting</div>
+        </div>
+        <div class="form-group">
+          <label for="dept">Bo'lim *</label>
+          <select id="dept" data-required>
+            <option value="">Tanlang</option>
+            <option>Kardiologiya</option>
+            <option>Nevrologiya</option>
+            <option>Pediatriya</option>
+            <option>Akusherlik</option>
+            <option>Ortopediya</option>
+            <option>Stomatologiya</option>
+          </select>
+          <div class="error">Bo'limni tanlang</div>
+        </div>
+        <div class="form-group">
+          <label for="date">Sana *</label>
+          <input id="date" type="date" data-required>
+          <div class="error">Sanani tanlang</div>
+        </div>
+        <div class="form-group">
+          <label for="note">Qo'shimcha izoh</label>
+          <textarea id="note" rows="4" placeholder="Shikoyatlaringizni qisqacha yozing"></textarea>
+        </div>
+        <button class="btn" type="submit" style="width:100%">Qabulga yozilish</button>
+        <div class="alert-success" id="successMsg">✅ Rahmat! Arizangiz qabul qilindi. Tez orada operator siz bilan bog'lanadi.</div>
+      </form>
+    </div>
+
+    <div class="reveal">
+      <div class="card" style="margin-bottom:24px">
+        <h3>📋 Qabul tartibi</h3>
+        <ol style="margin-left:20px;color:var(--muted)">
+          <li>Ariza to'ldiriladi</li>
+          <li>Operator tasdiqlaydi</li>
+          <li>Kerakli hujjatlar bilan keling</li>
+          <li>Shifokor qabuli</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>📄 Kerakli hujjatlar</h3>
+        <ul class="checklist" style="margin-top:12px;color:var(--muted)">
+          <li>Pasport yoki ID karta</li>
+          <li>Sug'urta polisi (bo'lsa)</li>
+          <li>Oldingi tahlil natijalari</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<script src="script.js" defer></script>
+</body>
+</html>

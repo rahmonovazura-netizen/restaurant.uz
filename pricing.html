@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narxlar - Shifo Tibbiyot Markazi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header-slot"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Xizmat narxlari</h1>
+    <p>Shaffof va oldindan ma'lum narxlar</p>
+    <div class="breadcrumb"><a href="index.html">Bosh sahifa</a> / Narxlar</div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="filters">
+      <button class="tab-btn filter-btn active" data-tab="ambulator">Ambulator</button>
+      <button class="tab-btn filter-btn" data-tab="stasionar">Statsionar</button>
+    </div>
+
+    <div class="grid grid-3" data-tab-panel="ambulator">
+      <div class="card price-card reveal">
+        <h3>Shifokor qabuli</h3>
+        <div class="price">150 000 <small>so'm</small></div>
+        <ul><li>Terapevt ko'rigi</li><li>Tashxis va tavsiya</li><li>Retsept</li></ul>
+        <a href="appointment.html" class="btn">Yozilish</a>
+      </div>
+      <div class="card price-card featured reveal">
+        <h3>Asosiy paket</h3>
+        <div class="price">450 000 <small>so'm</small></div>
+        <ul><li>Terapevt ko'rigi</li><li>Umumiy qon tahlili</li><li>EKG</li></ul>
+        <a href="appointment.html" class="btn">Yozilish</a>
+      </div>
+      <div class="card price-card reveal">
+        <h3>Premium paket</h3>
+        <div class="price">1 800 000 <small>so'm</small></div>
+        <ul><li>Mutaxassislar ko'rigi</li><li>MRT yoki KT</li><li>To'liq laboratoriya</li></ul>
+        <a href="appointment.html" class="btn">Yozilish</a>
+      </div>
+    </div>
+
+    <div class="grid grid-3" data-tab-panel="stasionar" style="display:none">
+      <div class="card price-card reveal">
+        <h3>Standart palata</h3>
+        <div class="price">300 000 <small>so'm / kun</small></div>
+        <ul><li>Yotoq va oziq-ovqat</li><li>Kunlik ko'rik</li></ul>
+        <a href="appointment.html" class="btn">Yozilish</a>
+      </div>
+      <div class="card price-card featured reveal">
+        <h3>Komfort palata</h3>
+        <div class="price">550 000 <small>so'm / kun</small></div>
+        <ul><li>Alohida xona</li><li>Konditsioner</li><li>Shaxsiy hamshira</li></ul>
+        <a href="appointment.html" class="btn">Yozilish</a>
+      </div>
+      <div class="card price-card reveal">
+        <h3>VIP palata</h3>
+        <div class="price">950 000 <small>so'm / kun</small></div>
+        <ul><li>Lyuks jihoz</li><li>Alohida hammom</li><li>24 soat xizmat</li></ul>
+        <a href="appointment.html" class="btn">Yozilish</a>
+      </div>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);margin-top:30px">* Narxlar namunaviy bo'lib, aniq summa shifokor tayinlovi va xizmat turiga qarab o'zgarishi mumkin.</p>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<script src="script.js" defer></script>
+</body>
+</html>

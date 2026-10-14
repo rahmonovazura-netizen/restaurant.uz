@@ -1,0 +1,297 @@
+/* ===== Shifo Tibbiyot Markazi - Umumiy uslub ===== */
+:root {
+  --primary: #0a6e8a;
+  --primary-dark: #084f65;
+  --accent: #19b5a5;
+  --accent-soft: #e6f7f5;
+  --danger: #e04848;
+  --text: #1d2b36;
+  --muted: #5d6b76;
+  --bg: #f5f9fb;
+  --card: #ffffff;
+  --border: #dde7ec;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(10, 70, 90, 0.08);
+  --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --text: #e6eef2;
+  --muted: #9fb1bb;
+  --bg: #0f1c24;
+  --card: #172830;
+  --border: #243a45;
+  --accent-soft: #15332f;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  transition: background var(--transition), color var(--transition);
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--primary); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--accent); }
+
+.container { width: min(1180px, 92%); margin: 0 auto; }
+section { padding: 70px 0; }
+.section-title { text-align: center; margin-bottom: 40px; }
+.section-title h2 { font-size: 2.1rem; color: var(--primary-dark); }
+.section-title p { color: var(--muted); max-width: 640px; margin: 10px auto 0; }
+.tag {
+  display: inline-block; padding: 6px 14px; border-radius: 30px;
+  background: var(--accent-soft); color: var(--primary); font-size: .85rem; font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ===== Tugmalar ===== */
+.btn {
+  display: inline-block; padding: 12px 26px; border-radius: 40px; border: none; cursor: pointer;
+  background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-weight: 600;
+  box-shadow: 0 6px 18px rgba(10, 110, 138, .3); transition: var(--transition); font-size: 1rem;
+}
+.btn:hover { transform: translateY(-2px); color: #fff; box-shadow: 0 10px 24px rgba(10, 110, 138, .4); }
+.btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); box-shadow: none; }
+.btn-outline:hover { background: var(--primary); color: #fff; }
+.btn-danger { background: var(--danger); box-shadow: 0 6px 18px rgba(224, 72, 72, .3); }
+
+/* ===== Header / Navigatsiya ===== */
+.topbar { background: var(--primary-dark); color: #d9f1f6; font-size: .9rem; padding: 8px 0; }
+.topbar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.topbar a { color: #d9f1f6; }
+
+.header {
+  position: sticky; top: 0; z-index: 100; background: var(--card);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .06); transition: var(--transition);
+}
+.header.scrolled { box-shadow: 0 6px 22px rgba(0, 0, 0, .12); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.2rem; color: var(--primary-dark); }
+.logo-icon {
+  width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-size: 1.4rem;
+}
+.nav-links { display: flex; gap: 6px; list-style: none; align-items: center; }
+.nav-links a {
+  color: var(--text); padding: 8px 12px; border-radius: 10px; font-weight: 500; font-size: .95rem;
+}
+.nav-links a:hover, .nav-links a.active { background: var(--accent-soft); color: var(--primary); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.theme-toggle {
+  background: var(--accent-soft); border: none; width: 40px; height: 40px; border-radius: 50%;
+  cursor: pointer; font-size: 1.1rem;
+}
+.menu-toggle { display: none; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--text); }
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(120deg, rgba(10, 110, 138, .92), rgba(25, 181, 165, .85)),
+              url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80") center/cover;
+  color: #fff; padding: 110px 0 120px;
+}
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+.hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 18px; }
+.hero p { font-size: 1.1rem; opacity: .95; margin-bottom: 28px; }
+.hero .btn-outline { color: #fff; border-color: #fff; }
+.hero .btn-outline:hover { background: #fff; color: var(--primary); }
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-card {
+  background: rgba(255, 255, 255, .15); backdrop-filter: blur(10px); border-radius: var(--radius);
+  padding: 30px; border: 1px solid rgba(255, 255, 255, .25);
+}
+.hero-card h3 { margin-bottom: 14px; }
+.hero-card li { list-style: none; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, .2); }
+
+/* ===== Sahifa sarlavhasi (ichki sahifalar) ===== */
+.page-hero {
+  background: linear-gradient(120deg, var(--primary), var(--accent)); color: #fff;
+  padding: 70px 0; text-align: center;
+}
+.page-hero h1 { font-size: 2.6rem; }
+.page-hero p { opacity: .9; margin-top: 8px; }
+.breadcrumb { margin-top: 14px; font-size: .9rem; opacity: .9; }
+.breadcrumb a { color: #fff; }
+
+/* ===== Kartochkalar ===== */
+.grid { display: grid; gap: 26px; }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.card {
+  background: var(--card); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow);
+  border: 1px solid var(--border); transition: var(--transition); position: relative; overflow: hidden;
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(10, 70, 90, .15); }
+.card .icon {
+  width: 60px; height: 60px; border-radius: 16px; display: grid; place-items: center;
+  font-size: 1.8rem; background: var(--accent-soft); margin-bottom: 18px;
+}
+.card h3 { margin-bottom: 10px; color: var(--primary-dark); }
+.card p { color: var(--muted); font-size: .97rem; }
+.card .more { display: inline-block; margin-top: 14px; font-weight: 600; }
+
+/* Statistika */
+.stats { background: linear-gradient(120deg, var(--primary-dark), var(--primary)); color: #fff; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
+.stat-number { font-size: 2.8rem; font-weight: 800; }
+.stat-label { opacity: .9; }
+
+/* ===== Jadval ===== */
+.table-wrap { overflow-x: auto; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; min-width: 520px; }
+th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: var(--primary); color: #fff; }
+tr:hover td { background: var(--accent-soft); }
+
+/* ===== Shifokorlar ===== */
+.doctor-card { text-align: center; }
+.avatar {
+  width: 110px; height: 110px; border-radius: 50%; margin: 0 auto 16px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--accent-soft), #cbeee9); font-size: 2.6rem;
+}
+.doctor-card .spec { color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+.filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; }
+.filter-btn {
+  padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border); background: var(--card);
+  color: var(--text); cursor: pointer; transition: var(--transition);
+}
+.filter-btn.active, .filter-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* ===== Forma ===== */
+.form-card { background: var(--card); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 6px; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--text); font-size: 1rem; font-family: inherit; transition: var(--transition);
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(25, 181, 165, .2);
+}
+.form-group .error { color: var(--danger); font-size: .85rem; margin-top: 4px; display: none; }
+.form-group.invalid .error { display: block; }
+.form-group.invalid input, .form-group.invalid select, .form-group.invalid textarea { border-color: var(--danger); }
+.alert-success {
+  display: none; background: var(--accent-soft); color: var(--primary-dark); padding: 16px; border-radius: 12px;
+  margin-top: 16px; border-left: 4px solid var(--accent);
+}
+
+/* ===== Accordion (FAQ) ===== */
+.accordion-item { background: var(--card); border-radius: 14px; margin-bottom: 14px; border: 1px solid var(--border); overflow: hidden; }
+.accordion-header {
+  width: 100%; padding: 20px 24px; background: none; border: none; text-align: left; font-size: 1.05rem;
+  font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+  font-family: inherit;
+}
+.accordion-body { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+.accordion-body p { padding: 0 24px 20px; color: var(--muted); }
+.accordion-item.open .accordion-body { max-height: 400px; }
+.accordion-item.open .arrow { transform: rotate(180deg); }
+.arrow { transition: var(--transition); }
+
+/* ===== Galereya ===== */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.gallery-item {
+  height: 240px; border-radius: 16px; overflow: hidden; cursor: pointer; position: relative;
+}
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.gallery-item:hover img { transform: scale(1.1); }
+.lightbox {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, .85); display: none; place-items: center; z-index: 999;
+}
+.lightbox.show { display: grid; }
+.lightbox img { max-width: 90%; max-height: 85vh; border-radius: 12px; }
+.lightbox-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 2.5rem; cursor: pointer; }
+
+/* ===== Yangiliklar ===== */
+.news-card img { height: 200px; width: 100%; object-fit: cover; border-radius: 12px; margin-bottom: 16px; }
+.news-date { color: var(--accent); font-size: .85rem; font-weight: 600; }
+
+/* ===== Shoshilinch ===== */
+.emergency-banner {
+  background: var(--danger); color: #fff; border-radius: var(--radius); padding: 30px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;
+}
+.emergency-banner .phone { font-size: 2.2rem; font-weight: 800; }
+.pulse { animation: pulse 1.8s infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(224, 72, 72, .6); }
+  70% { box-shadow: 0 0 0 18px rgba(224, 72, 72, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(224, 72, 72, 0); }
+}
+
+/* ===== Narxlar ===== */
+.price-card { text-align: center; }
+.price { font-size: 2.4rem; font-weight: 800; color: var(--primary); margin: 14px 0; }
+.price small { font-size: 1rem; color: var(--muted); }
+.price-card ul { list-style: none; margin: 18px 0 24px; text-align: left; }
+.price-card li { padding: 8px 0; border-bottom: 1px dashed var(--border); color: var(--muted); }
+.price-card.featured { border: 2px solid var(--accent); transform: scale(1.03); }
+
+/* ===== Kontakt ===== */
+.contact-info { display: grid; gap: 18px; }
+.contact-item { display: flex; gap: 16px; align-items: center; }
+.contact-item .icon { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; background: var(--accent-soft); font-size: 1.4rem; }
+.map-frame { width: 100%; height: 360px; border: 0; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* ===== Footer ===== */
+.footer { background: #0b2a36; color: #bcd5de; padding: 60px 0 20px; margin-top: 60px; }
+.footer h4 { color: #fff; margin-bottom: 16px; }
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 8px; }
+.footer a { color: #bcd5de; }
+.footer a:hover { color: var(--accent); }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px; }
+.footer-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid #1d4150; text-align: center; font-size: .9rem; }
+
+/* ===== Yuqoriga tugmasi ===== */
+.to-top {
+  position: fixed; bottom: 28px; right: 28px; width: 50px; height: 50px; border-radius: 50%;
+  border: none; background: var(--primary); color: #fff; font-size: 1.3rem; cursor: pointer;
+  opacity: 0; visibility: hidden; transition: var(--transition); z-index: 90;
+}
+.to-top.show { opacity: 1; visibility: visible; }
+
+/* ===== Animatsiya ===== */
+.reveal { opacity: 0; transform: translateY(30px); transition: all .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ===== Ichki sahifa matni ===== */
+.content-block { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.content-block img { border-radius: var(--radius); box-shadow: var(--shadow); height: 380px; width: 100%; object-fit: cover; }
+.content-block h2 { color: var(--primary-dark); margin-bottom: 14px; font-size: 2rem; }
+.content-block p { color: var(--muted); margin-bottom: 14px; }
+.checklist li { list-style: none; padding: 6px 0; }
+.checklist li::before { content: "✔ "; color: var(--accent); font-weight: 700; }
+
+/* ===== Responsive ===== */
+@media (max-width: 960px) {
+  .hero-grid, .content-block { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.3rem; }
+  .menu-toggle { display: block; }
+  .nav-links {
+    position: absolute; top: 76px; left: 0; right: 0; background: var(--card); flex-direction: column;
+    padding: 20px; box-shadow: var(--shadow); transform: translateY(-120%); transition: transform .35s ease; z-index: 99;
+  }
+  .nav-links.open { transform: translateY(0); }
+  .nav-links a { display: block; width: 100%; }
+  .nav-actions .btn { display: none; }
+  .content-block img { height: 260px; }
+}
+@media (max-width: 560px) {
+  section { padding: 50px 0; }
+  .hero { padding: 80px 0; }
+  .hero h1 { font-size: 1.9rem; }
+  .page-hero h1 { font-size: 2rem; }
+  .form-card { padding: 24px; }
+  .emergency-banner .phone { font-size: 1.6rem; }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aloqa - Shifo Tibbiyot Markazi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header-slot"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Biz bilan bog'laning</h1>
+    <p>Savolingiz yoki taklifingiz bo'lsa, yozing</p>
+    <div class="breadcrumb"><a href="index.html">Bosh sahifa</a> / Aloqa</div>
+  </div>
+</div>
+
+<section>
+  <div class="container grid grid-2" style="align-items:start">
+    <div class="form-card reveal">
+      <h2 style="margin-bottom:20px;color:var(--primary-dark)">Xabar yuborish</h2>
+      <form id="contactForm">
+        <div class="form-group"><label for="cname">Ismingiz</label><input id="cname" type="text" required></div>
+        <div class="form-group"><label for="cemail">Email</label><input id="cemail" type="email" required></div>
+        <div class="form-group"><label for="msg">Xabar</label><textarea id="msg" rows="5" required></textarea></div>
+        <button class="btn" type="submit">Yuborish</button>
+        <div class="alert-success" id="contactSuccess">✅ Xabaringiz yuborildi. Rahmat!</div>
+      </form>
+    </div>
+    <div class="reveal">
+      <div class="contact-info">
+        <div class="contact-item card"><div class="icon">📍</div><div><strong>Manzil</strong><br>Toshkent sh., Shifokorlar ko'chasi, 12-uy</div></div>
+        <div class="contact-item card"><div class="icon">📞</div><div><strong>Telefon</strong><br>+998 71 200 00 00</div></div>
+        <div class="contact-item card"><div class="icon">✉️</div><div><strong>Email</strong><br>info@shifo.uz</div></div>
+        <div class="contact-item card"><div class="icon">🕘</div><div><strong>Ish vaqti</strong><br>Dush–Shan: 08:00 – 20:00</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <iframe class="map-frame" loading="lazy" title="Xarita"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=69.20%2C41.28%2C69.30%2C41.34&layer=mapnik"></iframe>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<script src="script.js" defer></script>
+</body>
+</html>
